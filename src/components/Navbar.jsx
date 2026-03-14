@@ -1,16 +1,16 @@
 import { IoMenu } from "react-icons/io5";
-import { homeNav } from "../../constants/NavbarData";
+import { homeNav } from "../constants/NavbarData";
 
 export function Navbar() {
     return (
         <header className="p-2 bg-black">
             <nav className="bg-gray-800 flex items-center justify-between py-3 px-8 backdrop-blur-lg rounded-full">
                 <img
-                    src='public/Lumora-logo-1.png'
+                    src='/Lumora-logo-1.png'
                     alt='Lumora logo'
-                    className="w-12 sm:w-26 cursor-pointer"
+                    className="w-20 sm:w-26 cursor-pointer"
                 />
-                <ul className="sm:flex items-center hidden gap-8 text-white list-none">
+                <ul className="sm:flex items-center hidden gap-12 text-sm text-white list-none">
                     {
                         homeNav.map((navItem, index) => (
                             <li key={index} className="cursor-pointer text-white/60 hover:text-white font-semibold">

@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { Navbar } from "../components/Navbar";
+import { Footer } from "../components/Footer";
 
 export function LandingPageLayout() {
     return (
@@ -7,6 +8,7 @@ export function LandingPageLayout() {
             <Navbar />
             <section className="bg-black flex-1">
                 <Outlet />
+                <Footer />
             </section>
         </main>
     )
