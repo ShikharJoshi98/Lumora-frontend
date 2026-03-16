@@ -2,7 +2,7 @@ import { useState } from "react";
 import { LuX } from "react-icons/lu";
 
 export function AuthModal({ onClose }) {
-    const [isAuth, setAuth] = useState('signIn');
+    const [isMode, setMode] = useState('login');
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center px-4 md:px-10 bg-black/70 backdrop-blur-sm">
@@ -36,19 +36,16 @@ export function AuthModal({ onClose }) {
                     </ul>
                 </div>
                 <div className="w-full md:w-1/2 p-10 flex flex-col justify-center items-center md:items-start">
-                    <p className="text-neutral-400 text-sm mt-1">
-                        Sign in to your account to continue
-                    </p>
                     <div className="flex gap-4 mt-6">
-                        <button onClick={() => setAuth('signIn')} className={`px-6 py-2 ${isAuth === 'signIn' ? 'bg-blue-500/80 text-white rounded-lg' : 'text-neutral-400'} text-sm font-medium`}>
+                        <button onClick={() => setMode('login')} className={`px-6 py-2 ${isMode === 'login' ? 'bg-blue-500/80 text-white rounded-lg' : 'text-neutral-400'} text-sm font-medium`}>
                             Sign In
                         </button>
-                        <button onClick={() => setAuth('register')} className={`px-6 py-2 ${isAuth === 'register' ? 'bg-blue-500/80 text-white rounded-lg' : 'text-neutral-400'} text-sm`}>
+                        <button onClick={() => setMode('register')} className={`px-6 py-2 ${isMode === 'register' ? 'bg-blue-500/80 text-white rounded-lg' : 'text-neutral-400'} text-sm`}>
                             Register
                         </button>
                     </div>
                     {
-                        isAuth === 'signIn' &&
+                        isMode === 'login' &&
                         <div>
                             <input
                                 type="email"
@@ -65,16 +62,56 @@ export function AuthModal({ onClose }) {
                                     Forgot password?
                                 </button>
                             </div>
-                            <button className="mt-6 w-full cursor-pointer py-3 bg-linear-to-r from-blue-400 to-blue-700 rounded-lg font-medium">
+                            <button className="mt-6 w-full cursor-pointer py-3 bg-linear-to-r from-green-400 to-blue-700 rounded-lg font-medium">
                                 Sign In →
                             </button>
                             <p className="text-sm text-neutral-400 mt-4 text-center">
                                 Don't have an account?{" "}
-                                <span className="text-blue-400 cursor-pointer">
+                                <span onClick={() => setMode('register')} className="text-blue-400 cursor-pointer">
                                     Sign up for free
                                 </span>
                             </p>
                         </div>}
+                    {
+                        isMode === 'register' &&
+                        <div className="mt-6 space-y-4">
+                            <div className="grid grid-cols-2 gap-4">
+                                <input
+                                    type="text"
+                                    placeholder="First Name"
+                                    className="bg-[#020617] border border-white/10 rounded-lg px-4 py-3 text-sm text-white outline-none"
+                                />
+                                <input
+                                    type="text"
+                                    placeholder="Last Name"
+                                    className="bg-[#020617] border border-white/10 rounded-lg px-4 py-3 text-sm text-white outline-none"
+                                />
+                            </div>
+                            <input
+                                type="email"
+                                placeholder="Email Address"
+                                className="w-full bg-[#020617] border border-white/10 rounded-lg px-4 py-3 text-sm text-white outline-none"
+                            />
+                            <div>
+                                <input
+                                    type="password"
+                                    placeholder="Password"
+                                    className="w-full bg-[#020617] border border-white/10 rounded-lg px-4 py-3 text-sm text-white outline-none"
+                                />
+                                <p className="text-xs text-neutral-400 mt-2">
+                                    Must be at least 8 characters with numbers and symbols
+                                </p>
+                            </div>
+                            <input
+                                type="password"
+                                placeholder="Confirm your password"
+                                className="w-full bg-[#020617] border border-white/10 rounded-lg px-4 py-3 text-sm text-white outline-none"
+                            />
+                            <button className="w-full py-3 bg-linear-to-r from-green-400 to-blue-500 rounded-lg font-medium">
+                                Create Account →
+                            </button>
+                        </div>
+                    }
                 </div>
             </div>
         </div>
