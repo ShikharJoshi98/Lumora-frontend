@@ -1,11 +1,11 @@
 export const homeNav = [
     {
-        title:'Products'
+        title:'Features'
     },
     {
         title:'Pricing'
     },
     {
-        title:'Documentation'
+        title:'Templates'
     }
 ]

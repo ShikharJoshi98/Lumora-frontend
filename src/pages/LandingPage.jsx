@@ -4,23 +4,24 @@ import { aboutData, pricingPlans } from "../constants/LandingPageData"
 export function LandingPage() {
     return (
         <section className="relative text-center px-6 py-24 overflow-hidden">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-semibold max-w-4xl bg-linear-to-b from-white to-neutral-500 bg-clip-text text-transparent mx-auto">
-                Automate your work with Lumora
+            <h1 className="text-5xl md:text-7xl lg:text-7xl font-semibold max-w-3xl bg-linear-to-b from-white to-neutral-500 bg-clip-text text-transparent mx-auto">
+                Automate Your Work With <span className="text-blue-400">Lumora.</span>
             </h1>
-            <p className="mt-6 max-w-2xl text-neutral-400 mx-auto text-lg md:text-xl leading-relaxed">
+            <p className="mt-6 max-w-2xl text-neutral-400 mx-auto text-lg leading-relaxed">
                 Lumora helps teams automate workflows, eliminate repetitive tasks,
                 and focus on what actually matters.
             </p>
             <div className="flex gap-4 mt-10 flex-wrap justify-center">
-                <button className="px-8 py-4 rounded-xl bg-white text-black font-medium hover:scale-105 transition-all duration-300 shadow-lg">
+                <button className="px-8 py-3 font-semibold rounded-xl bg-white text-zinc-800 hover:bg-white/80 transition-all text-lg duration-300 shadow-lg">
                     Start for Free
                 </button>
-                <button className="px-8 py-4 rounded-xl border border-neutral-700 text-white hover:bg-neutral-900 transition-all duration-300">
-                    Book Demo
+                <button className="px-8 py-3 rounded-xl border font-semibold border-neutral-700 text-white hover:bg-neutral-900 transition-all text-lg duration-300">
+                    View Templates
                 </button>
             </div>
+
             <div className="relative mt-24 flex justify-center px-6">
-                <div className="absolute -top-20 h-125 w-225 bg-white/20 blur-[160px] rounded-full" />
+                <div className="absolute -top-20 h-125 w-225 bg-white/40 blur-[160px] rounded-full" />
                 <div className="relative w-full max-w-6xl rounded-3xl border border-white/10 bg-linear-to-b from-white/5 to-white/0 p-3 shadow-2xl backdrop-blur-xl">
                     <img
                         src="/lumora-banner.png"
@@ -29,6 +30,7 @@ export function LandingPage() {
                     />
                 </div>
             </div>
+
             <section className="mt-32 px-6">
                 <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
                     {
@@ -45,6 +47,7 @@ export function LandingPage() {
                     }
                 </div>
             </section>
+
             <section className="relative max-w-6xl mx-auto px-6 mt-40">
                 <div className="absolute inset-0 flex justify-center">
                     <div className="w-175 h-100 bg-blue-500/20 blur-[140px] rounded-full"></div>
@@ -69,6 +72,7 @@ export function LandingPage() {
                     </div>
                 </div>
             </section>
+
             <section className="mt-28 px-6">
                 <div className="max-w-6xl mx-auto text-center">
                     <h2 className="text-4xl md:text-5xl font-semibold text-white">

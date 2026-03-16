@@ -1,7 +1,11 @@
 import { IoMenu } from "react-icons/io5";
 import { homeNav } from "../constants/NavbarData";
+import { useState } from "react";
+import { AuthModal } from "./AuthModal";
 
 export function Navbar() {
+    const [isAuthModal, setAuthModal] = useState(false);
+
     return (
         <header className="p-2 bg-black">
             <nav className="bg-gray-800 flex items-center justify-between py-3 px-8 backdrop-blur-lg rounded-full">
@@ -21,7 +25,7 @@ export function Navbar() {
                 </ul>
                 <aside className="flex items-center gap-2">
                     <button
-                        href="/dashboard"
+                        onClick={() => setAuthModal(true)}
                         className="relative inline-flex h-10 overflow-hidden rounded-full p-0.5 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
                     >
                         <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
@@ -32,6 +36,9 @@ export function Navbar() {
                     <IoMenu className="text-white text-xl sm:hidden block" />
                 </aside>
             </nav>
+            {
+                isAuthModal && <AuthModal onClose={() => setAuthModal(false)} />
+            }
         </header>
     )
 }
