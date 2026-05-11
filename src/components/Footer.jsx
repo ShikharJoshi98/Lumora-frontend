@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 export function Footer() {
     return (
-        <footer className="flex md:flex-row flex-col-reverse gap-8 md:gap-0 md:justify-between max-w-7xl px-12 mx-auto py-12">
+        <footer className="flex md:flex-row flex-col-reverse gap-8 md:gap-0 md:justify-between border-t border-gray-500 max-w-7xl px-12 mx-auto py-12">
             <div className="flex flex-col gap-8">
                 <div className="flex items-center gap-6 text-neutral-400">
                     <FaGithub className="hover:text-white cursor-pointer" />

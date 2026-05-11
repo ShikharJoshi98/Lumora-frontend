@@ -3,7 +3,7 @@ import { aboutData, pricingPlans } from "../constants/LandingPageData"
 
 export function LandingPage() {
     return (
-        <section className="relative text-center px-6 py-24 overflow-hidden">
+        <section className="relative text-center px-6 py-24 mt-20 overflow-hidden">
             <h1 className="text-5xl md:text-7xl lg:text-7xl font-semibold max-w-3xl bg-linear-to-b from-white to-neutral-500 bg-clip-text text-transparent mx-auto">
                 Automate Your Work With <span className="bg-linear-to-b from-blue-500 to-blue-500/50 bg-clip-text text-transparent">Lumora.</span>
             </h1>
@@ -66,7 +66,7 @@ export function LandingPage() {
                         <p className="text-neutral-400 text-sm">
                             No credit card required
                         </p>
-                        <button className="px-8 py-3 rounded-xl bg-white text-black font-semibold hover:scale-105 over:shadow-lg transition duration-300">
+                        <button className="px-8 py-3 rounded-xl bg-white text-black font-semibold hover:bg-white/90 transition-all duration-300 cursor-pointer">
                             Start for free
                         </button>
                     </div>

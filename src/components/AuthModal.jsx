@@ -22,7 +22,7 @@ export function AuthModal({ onClose }) {
                     <h2 className="text-3xl mt-8 font-semibold text-white">
                         Automate Everything.
                     </h2>
-                    <p className="text-blue-400 text-xl font-semibold mt-2">
+                    <p className="text-blue-400 text-3xl font-semibold mt-2">
                         Smarter.
                     </p>
                     <p className="text-neutral-400 mt-6 text-sm">
@@ -98,9 +98,6 @@ export function AuthModal({ onClose }) {
                                     placeholder="Password"
                                     className="w-full bg-[#020617] border border-white/10 rounded-lg px-4 py-3 text-sm text-white outline-none"
                                 />
-                                <p className="text-xs text-neutral-400 mt-2">
-                                    Must be at least 8 characters with numbers and symbols
-                                </p>
                             </div>
                             <input
                                 type="password"
