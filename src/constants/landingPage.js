@@ -1,17 +1,31 @@
-export const aboutData = [
+import { LuBot, LuChartBar, LuClock3, LuPuzzle, LuShieldCheck, LuZap } from "react-icons/lu";
+
+export const features = [
     {
-        title: 'Automate Any Workflow',
-        text: 'Build powerful automations that connect your favorite apps. From notifications to complex workflows, Lumora helps you automate tasks across your entire stack in minutes.'
+        icon: LuZap,
+        title: "Visual Workflow Builder",
+        description:
+            "Drag, drop, and connect. Build complex workflows visually—no code needed.",
     },
     {
-        title: 'Connect Your Favorite Tools',
-        text: 'Integrate seamlessly with tools like Slack, Notion, Google Drive, Discord, and more. Create workflows that move data and trigger actions across all your apps.'
+        icon: LuPuzzle,
+        title: "Favorite Tool Connection",
+        description:
+            "Integrate seamlessly with tools like Slack, Notion, Google Drive, Discord, and more.",
     },
     {
-        title: 'AI-Powered Automation',
-        text: 'Use AI inside your workflows to summarize data, generate responses, and make smarter decisions automatically—no manual work required.'
+        icon: LuBot,
+        title: "AI-Powered Automation",
+        description:
+            "Let AI help you build, optimize, and scale your workflows.",
+    },
+    {
+        icon: LuClock3,
+        title: "Advanced Scheduling",
+        description:
+            "Run workflows on a schedule, in real-time, or based on events.",
     }
-]
+];
 
 export const pricingPlans = [
   {
@@ -60,4 +74,3 @@ export const pricingPlans = [
     ]
   }
 ];
-

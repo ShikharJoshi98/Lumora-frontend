@@ -1,44 +1,25 @@
-import { IoMenu } from "react-icons/io5";
+import { LuMenu } from "react-icons/lu";
 import { homeNav } from "../constants/NavbarData";
-import { useState } from "react";
-import { AuthModal } from "./AuthModal";
 
-export function Navbar() {
-    const [isAuthModal, setAuthModal] = useState(false);
-
+function Navbar() {
     return (
-        <header className="p-1 bg-black">
-            <nav className="bg-gray-800/60 fixed z-10 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl mx-auto top-2 flex items-center justify-between py-3 px-8 backdrop-blur-lg rounded-full">
-                <img
-                    src='/Lumora-logo-1.png'
-                    alt='Lumora logo'
-                    className="w-20 sm:w-26 cursor-pointer"
-                />
-                <ul className="sm:flex items-center hidden gap-12 text-sm text-white list-none">
+        <nav className="bg-linear-to-b from-[#0a0315] to-[#0b0318]  w-full">
+            <aside className="max-w-7xl px-3 py-5 sm:px-5 mx-auto flex items-center justify-between">
+                <img src="/Lumora-logo-1.png" alt="Lumora Logo" className="w-24 sm:w-32" />
+                <ul className="hidden md:flex items-center gap-16 lg:gap-24">
                     {
                         homeNav.map((navItem, index) => (
-                            <li key={index} className="cursor-pointer text-white/60 hover:text-white font-semibold">
-                                {navItem.title}
-                            </li>
+                            <li key={index} className="text-sm hover:text-violet-400 font-medium transition-all duration-300 cursor-pointer text-white/80">{navItem.title}</li>
                         ))
                     }
                 </ul>
-                <aside className="flex items-center gap-2">
-                    <button
-                        onClick={() => setAuthModal(true)}
-                        className="relative focus:outline-none inline-flex h-10 overflow-hidden rounded-full p-0.5"
-                    >
-                        <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93C5FD_0%,#3B82F6_40%,#1D4ED8_60%,#93C5FD_100%)]" />
-                        <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-                            Get Started
-                        </span>
-                    </button>
-                    <IoMenu className="text-white text-xl sm:hidden block" />
-                </aside>
-            </nav>
-            {
-                isAuthModal && <AuthModal onClose={() => setAuthModal(false)} />
-            }
-        </header>
+                <div className="flex items-center gap-3">
+                    <button className="bg-violet-500/10 py-1 sm:py-2 px-2 sm:px-4 cursor-pointer hover:bg-violet-500/15 rounded-xl text-violet-400 text-sm sm:text-base font-semibold border-2 border-violet-500">Get Started</button>
+                    <LuMenu className="block md:hidden text-violet-400 text-lg" />
+                </div>
+            </aside>
+        </nav>
     )
 }
+
+export default Navbar;

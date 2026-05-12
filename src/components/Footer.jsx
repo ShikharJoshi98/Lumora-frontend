@@ -10,13 +10,13 @@ export function Footer() {
                     <FaLinkedin className="hover:text-white cursor-pointer" />
                 </div>
                 <div className="flex flex-wrap gap-8 text-sm text-neutral-400">
-                    <a href="#" className="hover:text-white">Products</a>
+                    <a href="#" className="hover:text-white">Features</a>
                     <a href="#" className="hover:text-white">Pricing</a>
-                    <a href="#" className="hover:text-white">Documentation</a>
+                    <a href="#" className="hover:text-white">Templates</a>
                 </div>
                 <div className="flex flex-wrap items-center gap-6 text-sm text-neutral-400">
                     <div className="flex items-center gap-2">
-                        <div className="w-8 h-5 bg-blue-600 rounded-full flex items-center justify-center text-white text-xs">
+                        <div className="w-8 h-5 bg-violet-800 rounded-full flex items-center justify-center text-white text-xs">
                             ✓
                         </div>
                         <span className="hover:text-white cursor-pointer">

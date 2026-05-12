@@ -1,15 +1,17 @@
 import { Outlet } from "react-router-dom";
-import { Navbar } from "../components/Navbar";
+import Navbar from "../components/Navbar";
 import { Footer } from "../components/Footer";
 
-export function LandingPageLayout() {
+function HomeLayout() {
     return (
         <main className="flex flex-col min-h-screen">
             <Navbar />
-            <section className="bg-black flex-1">
+            <div className="bg-[#0b0318] flex-1">
                 <Outlet />
                 <Footer />
-            </section>
+            </div>
         </main>
     )
 }
+
+export default HomeLayout;
